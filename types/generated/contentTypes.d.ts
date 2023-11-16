@@ -683,15 +683,17 @@ export interface ApiPlayerPlayer extends Schema.CollectionType {
     singularName: 'player';
     pluralName: 'players';
     displayName: 'Player';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    mobile: Attribute.String;
+    mobile: Attribute.String & Attribute.Required & Attribute.Unique;
     serviceProvider: Attribute.String;
     cycle: Attribute.Integer;
     ref: Attribute.String;
+    q_id: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

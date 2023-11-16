@@ -4,7 +4,8 @@
   "info": {
     "singularName": "player",
     "pluralName": "players",
-    "displayName": "Player"
+    "displayName": "Player",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "mobile": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "serviceProvider": {
       "type": "string"
@@ -22,6 +25,9 @@
     },
     "ref": {
       "type": "string"
+    },
+    "q_id": {
+      "type": "json"
     }
   }
 }
